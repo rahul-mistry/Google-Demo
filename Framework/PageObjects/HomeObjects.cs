@@ -38,16 +38,12 @@ namespace Framework.PageObjects
             Report.AddToHtmlReport("STEP 2: Enter text for the search on google page.", false, true);
 
            
-            string txtSearch = "Hello world";
+             //IWebElement FName = new Common(_driver).FindElementWithDynamicWait(_driver, By.XPath("//a[contains(.,'Images')]"), "'Search' textbox on Google page.");
 
+            // FName.SendKeys("Hello world");
 
-            IWebElement FName = new Common(_driver).FindElementWithDynamicWait(_driver, By.XPath(".//*[@id='gs_htif0']"), "'Search' textbox on Google page.");        
-
-            Common.enterText(FName, txtSearch);
-
-            IWebElement Search_btn = new Common(_driver).FindElementClick(By.XPath("//input[@value='Google Search']"));
-
+            IWebElement Search_btn = new Common(_driver).FindElementClick(By.XPath("//a[contains(.,'Images')]"),"CLick on 'Images' link on google page.");
+          
         }
-
     }
 }
