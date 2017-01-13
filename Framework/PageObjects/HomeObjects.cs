@@ -43,7 +43,11 @@ namespace Framework.PageObjects
             // FName.SendKeys("Hello world");
 
             IWebElement Search_btn = new Common(_driver).FindElementClick(By.XPath("//a[contains(.,'Images')]"),"CLick on 'Images' link on google page.");
-          
+
+
+            _driver.Navigate().GoToUrl("http://www.msn.com/en-in/");
+
+            new Common(_driver).pause(2000);
         }
     }
 }
